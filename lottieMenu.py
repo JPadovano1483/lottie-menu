@@ -3,8 +3,6 @@ import time
 from selenium.webdriver.common.by import By
 import undetected_chromedriver as uc
 
-
-
 def get_menu():
   return driver.find_elements(By.XPATH, "//td[@class='cbo_nn_itemHover']")
 
@@ -34,7 +32,7 @@ if __name__ == '__main__':
     breakfastMenu = [item.text for item in breakfastMenu]
     print(breakfastMenu)
 
-  elif (meal == 'lunch'):
+  elif (meal == 'lunch'): 
     # click lunch button
     driver.find_element(By.XPATH, "//tr[@class='cbo_nn_menuPrimaryRow']/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td[2]/a").click()
     time.sleep(0.2)
